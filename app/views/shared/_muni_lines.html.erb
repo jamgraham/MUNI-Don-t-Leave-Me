@@ -1,0 +1,30 @@
+<h1>Select A Muni Line</h1>
+<div class="table-responsive">
+<table class="table table-hover" id='muni-route-table'>
+        <thead>
+          <tr>
+            <th>Line Name</th>
+            <th>Inbound</th>
+            <th>Outbound</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <%@agency_list['RTT']['AgencyList']['Agency']['RouteList']['Route'].each do |route|%>
+          <tr>
+            <td><%=route['Name']%></td>
+            <%route['RouteDirectionList']['RouteDirection'].each do |direction|%>
+            <%begin%>
+              <td>
+                <a href="
+                route?code=<%=route['Code']%>&amp;direction=<%=JSON.parse(direction.to_json)["Code"]%>
+                  "><%=JSON.parse(direction.to_json)["Name"]%></a>
+              </td>
+              <%rescue%>
+              <%end%>
+            <%end%>
+          </tr>
+          <%end%>
+        </tbody>
+      </table>
+</div>

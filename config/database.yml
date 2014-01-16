@@ -1,0 +1,16 @@
+common: &common
+  adapter: postgresql
+  username: topcoat
+  password: # from psql setup, see Postgresql
+
+development:
+     adapter: postgresql
+     host: localhost
+     database: munidontleaveme_dev
+test:
+  <<: *common
+  database: munidontleaveme_test
+
+production:
+  <<: *common
+  database: munidontleaveme_prod

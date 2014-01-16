@@ -1,0 +1,34 @@
+<%begin%>
+<h2><%=@stops_for_route['RTT']['AgencyList']['Agency']['RouteList']['Route']['Name']%> <%=@stops_for_route['RTT']['AgencyList']['Agency']['RouteList']['Route']['RouteDirectionList']['RouteDirection']['Name']%></h2>
+
+<input type='hidden' id='route-name' value="<%=@stops_for_route['RTT']['AgencyList']['Agency']['RouteList']['Route']['Name']%>"/>
+<input type='hidden' id='route-direction' value="<%=@stops_for_route['RTT']['AgencyList']['Agency']['RouteList']['Route']['RouteDirectionList']['RouteDirection']['Name']%>"/>
+<%rescue%>
+<%end%>
+<section id="current-page" data-page="stop-details">
+<div class="table-responsive">
+<table class="table table-hover" id='stop-details-table'>
+        <thead>
+          <tr>
+            <th>Stop Name</th>
+            <th>Distance From You</th>
+            <th>MUNI Arives In</th>
+          </tr>
+        </thead>
+        <tbody>
+<%begin%>
+        <%@stops_for_route['RTT']['AgencyList']['Agency']['RouteList']['Route']['RouteDirectionList']['RouteDirection']['StopList']['Stop'].each do |stop|%>
+          <tr>
+            <td>
+            	<%=stop['name']%>
+            </td>
+            <td><i class="icon-spin icon-refresh"></td>
+            <td><i class="icon-spin icon-refresh"></td>
+          </tr>
+          <%end%>
+<%rescue%>
+<%end%>
+        </tbody>
+      </table>
+</div>
+</section>

@@ -1,0 +1,10 @@
+Searching 116 files for "initialize_on_precompile"
+
+/Users/James/Documents/Projects/uber/munidontleaveme/config/application.rb:
+   58      config.assets.compress = false
+   59  
+   60:     config.assets.initialize_on_precompile = false
+   61  
+   62      # Version of your assets, change this if you want to expire all your assets
+
+1 match in 1 file
