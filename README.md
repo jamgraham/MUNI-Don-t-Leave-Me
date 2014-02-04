@@ -19,6 +19,3 @@ See MUNI arrival times based on your current location. Currently the user locati
  * It would be nice to allow the user to enter a custom location rather than always using the location from the user's IP address
 * Caching
  * Caching distance from MUNI stop based on address or lat/lng would save processing time and allow the result to be returned to the user much more quickly.
- 
-## Find me on LinkedIn
-* http://www.linkedin.com/profile/view?id=10998133
