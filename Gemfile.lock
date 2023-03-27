@@ -38,7 +38,7 @@ GEM
       execjs
     coffee-script-source (1.6.3)
     erubis (2.7.0)
-    execjs (2.0.2)
+    execjs (2.8.1)
     geocoder (1.1.9)
     hike (1.2.3)
     i18n (0.6.9)
@@ -46,7 +46,7 @@ GEM
     jquery-rails (3.0.4)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
-    json (1.8.0)
+    json (1.8.6)
     libv8 (3.11.8.17)
     mail (2.5.4)
       mime-types (~> 1.16)
@@ -105,7 +105,7 @@ GEM
       rails (>= 3.1)
       railties (>= 3.1)
     tzinfo (0.3.38)
-    uglifier (2.4.0)
+    uglifier (2.7.2)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
 
